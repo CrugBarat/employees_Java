@@ -10,4 +10,16 @@ public abstract class Employee {
         this.salary = salary;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public String getNationalInsuranceNumber() {
+        return this.nationalInsuranceNumber;
+    }
+
+    public double getSalary() {
+        return this.salary;
+    }
+
 }
