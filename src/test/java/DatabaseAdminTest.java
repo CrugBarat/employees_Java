@@ -19,6 +19,18 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void canSetName() {
+        databaseAdmin.setName("Tim Canterbury");
+        assertEquals("Tim Canterbury", databaseAdmin.getName());
+    }
+
+    @Test
+    public void cantSetNameWithNull() {
+        databaseAdmin.setName(null);
+        assertEquals("Dawn Tinsley", databaseAdmin.getName());
+    }
+
+    @Test
     public void hasNINumber() {
         assertEquals("DW129856X", databaseAdmin.getNationalInsuranceNumber());
     }
