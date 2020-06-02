@@ -52,6 +52,12 @@ public class ManagementTest {
     }
 
     @Test
+    public void salaryUnaffectedByNegativeValueInput() {
+        manager.raiseSalary(-24.00);
+        assertEquals(2400.00, manager.getSalary(), 0.1);
+    }
+
+    @Test
     public void hasPayBonus() {
         assertEquals(24.00, manager.payBonus(), 0.1);
     }

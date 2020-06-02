@@ -47,6 +47,12 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void salaryUnaffectedByNegativeValueInput() {
+        databaseAdmin.raiseSalary(-120.00);
+        assertEquals(1200.00, databaseAdmin.getSalary(), 0.1);
+    }
+
+    @Test
     public void hasPayBonus() {
         assertEquals(12.00, databaseAdmin.payBonus(), 0.1);
     }
